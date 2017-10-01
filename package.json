@@ -1,0 +1,24 @@
+{
+  "name": "rest-api-ninja",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aldoso/rest-api-ninja.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aldoso/rest-api-ninja/issues"
+  },
+  "homepage": "https://github.com/aldoso/rest-api-ninja#readme",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.1",
+    "nodemon": "^1.12.1"
+  }
+}

@@ -1,0 +1,15 @@
+<% include partials/header.ejs %>
+
+This is the profile page of <h1><%= person %></h1>
+
+<p>age: <%= data.age %></p>
+<p>job: <%= data.job %></p>
+
+<h3>Hobbies:</h3>
+<ul>
+     <% data.hobbies.forEach(function(item){ %>
+      <li> I like: <%=  item %>  </li>
+     <% })  %>
+</ul>
+
+<% include partials/footer.ejs %>
