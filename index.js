@@ -51,7 +51,9 @@ app.get('/contact', function(req, res){
 
 
 // POST Routes
+
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
+//code for body-parser
 
 app.post('/contact', urlencodedParser, function (req, res) {
   console.log(req.body)
