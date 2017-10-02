@@ -5,6 +5,10 @@ body {
   font-family: 'Arial', sans-serif;
 }
 
+form label{
+  display: block;
+  margin-top: 30px;
+}
 
 footer {
   width:100%;

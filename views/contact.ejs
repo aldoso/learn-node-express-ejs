@@ -3,4 +3,14 @@
 <h1>Contact</h1>
 This is the contact page
 
+<form id="contact-form" method="POST" action="/contact">
+  <label for="who">Who do you want to contact</label>
+  <input type="text" name='who' value="<%= qs.person %>" >
+  <label for="department">Who do you want to contact</label>
+  <input type="text" name='department' value="<%= qs.dept %>" >
+  <label for="email">Your email</label>
+  <input type="email" name='email'>
+  <input type="submit" valut ='submit' />
+</form>
+
 <% include partials/footer.ejs %>

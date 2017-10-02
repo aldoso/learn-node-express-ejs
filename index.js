@@ -1,10 +1,12 @@
-const express = require('express'); //requiring the express package
-const app = express(); //making the app use expressjs
+const express = require('express') //requiring the express package
+const bodyParser = require('body-parser')
+const app = express() //making the app use expressjs
 
 app.set('view engine', 'ejs') //setting the template engine to embeddedjs (ejs)
 //ejs default works with views directory (create it)
 
-app.listen(process.env.PORT || 3000) // creating the server (works with heroku)
+app.listen(process.env.PORT || 2000) // creating the server (works with heroku)
+console.log("This app is live on: http://localhost:2000")
 
 //Routes
 app.get("/test", function(req, res){
@@ -28,7 +30,7 @@ app.get("/user/:name", function(req, res){
 
 //display a dynamic template - ejs
 app.get('/', function(req, res){
-  res.render('index.ejs')
+  res.render('index')
 })
 
 app.get('/profile/:name', function(req, res){
@@ -44,5 +46,14 @@ app.get('/profile/:name', function(req, res){
 })
 
 app.get('/contact', function(req, res){
-  res.render('contact.ejs')
+  res.render('contact', {qs: req.query})
+})
+
+
+// POST Routes
+const urlencodedParser = bodyParser.urlencoded({ extended: false })
+
+app.post('/contact', urlencodedParser, function (req, res) {
+  console.log(req.body)
+  res.render('contact-success', {data: req.body})
 })
